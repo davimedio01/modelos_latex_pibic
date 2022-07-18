@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright by Davi Neves (Davizaum), 2022
+% E-mail para contato: davi.neves@unesp.br
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tamanho da Fonte (ABNT = 12pt) e Tipo de Documento
+\documentclass[12pt,a4paper]{article}
+
+% --------------------------------------------------------
+% PACOTES
+% --------------------------------------------------------
+
+% Configuração para o Português Brasileiro!
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+
+% Pacotes de citações ABNT
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf, abnt-etal-list=0 ]{lib/abntex2cite}    % Citações padrão ABNT
+
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{array}
+%\usepackage{pgfplots}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{breakcites}
+\usepackage{float}
+%\usepackage{times} %todo: decidir sobre a fonte
+\usepackage{lipsum}
+\usepackage[]{algorithm2e}		
+\usepackage{lscape}
+\usepackage{scalefnt}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+% Configurações de Margem (ABNT)
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+
+% --------------------------------------------------------
+% INFORMAÇÕES DE DADOS PARA PDF FINAL
+% --------------------------------------------------------
+
+\title{Título}
+\author{Autor}
+\date{2022}
+
+% --------------------------------------------------------
+% ESPAÇAMENTOS ENTRE LINHAS E PARÁGRAFOS
+% --------------------------------------------------------
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}
+
+% --------------------------------------------------------
+% INÍCIO DO DOCUMENTO
+% --------------------------------------------------------
+
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+
+% --------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% --------------------------------------------------------
+
+\input{chapters/Pre-Textual/capa.tex} % ALTERAR A CAPA NESSE ARQUIVO .TEX
+
+% --------------------------------------------------------
+% RESUMOS
+% --------------------------------------------------------
+\input{chapters/Pre-Textual/resumo.tex}
+
+% --------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% --------------------------------------------------------
+
+\input{chapters/01_Introducao.tex}
+
+\input{chapters/02_Objetivos_e_Justificativa.tex}
+
+\input{chapters/03_Materiais_e_Metodos.tex}
+
+\input{chapters/04_Resultados_e_Discussao.tex}
+
+\input{chapters/05_Conclusao.tex}
+
+\input{chapters/06_Agradecimentos.tex} % Optativo?
+
+% --------------------------------------------------------
+% REFERÊNCIAS BIBLIOGRÁFICAS
+% --------------------------------------------------------
+\newpage % Reservar página exclusiva para referências (optativo)
+
+%\bibliographystyle{apalike}
+\bibliographystyle{lib/abntex2-alf} % Formato ABNT!
+\bibliography{references.bib}
+
+% --------------------------------------------------------
+% FINAL DO DOCUMENTO
+% --------------------------------------------------------
+
+\end{document}
