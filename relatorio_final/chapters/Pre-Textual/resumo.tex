@@ -1,33 +1,41 @@
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% OBS (MUITO IMPORTANTE)
+% Caso use o resumo em inglês também, comentar (%) o "\end{titlepage}" do "Resumo em Português" (linha 22) e descomentar (tirar o %) o "\end{titlepage}" do "Resumo em Inglês" (linha 40).
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 % --------------------------------------------------------
 % RESUMO EM PORTUGUÊS
 % --------------------------------------------------------
-\newpage
-\pagestyle{empty}
-\begin{center}
-    {\bf \Large Resumo}
-\end{center}
+%\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 
-\noindent
-Texto do Resumo
-\\
-\\
-\noindent {\bf Palavras-chave:} Palavras-chave
+\begin{titlepage}
+
+    \begin{center}
+        \bf \uppercase {Resumo}
+    \end{center}
+
+    \vspace{0.8cm}
+    
+    Texto
+
+    \textbf{Palavras-chave:} Palavra1; Palavra2
+\end{titlepage}
+
+\vspace{1.6cm}
 
 % --------------------------------------------------------
 % RESUMO EM INGLÊS (ABSTRACT)
 % --------------------------------------------------------
-\newpage
-\pagestyle{empty}
-\begin{center}
-    {\bf \Large Abstract}
-\end{center}
 
-\noindent
-Text of Abstract
-\\
-\\
-\noindent {\bf Keywords:} Keywords
+%     \begin{center}
+%         \bf \uppercase {Abstract} 
+%     \end{center}
+    
+%      \vspace{0.8cm}
+    
+%      Text
+     
+%     \textbf{Keywords:} Keyword1; Keyword2
 
-\newpage
-\setcounter{page}{1} % Inicia o contador de páginas para os capítulo (resumo não conta!)
-\pagestyle{plain} % Retorna o estilo do texto para padrão
+% \end{titlepage}
+

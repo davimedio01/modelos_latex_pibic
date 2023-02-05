@@ -1,8 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Copyright by Davi Neves (Davizaum), 2022
+% Copyright by Davi Neves (Davizaum), 2023
 % E-mail para contato: davi.neves@unesp.br
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Tamanho da Fonte (ABNT = 12pt) e Tipo de Documento
+% --------------------------------------------------------
+% DEFINIÇÕES DO DOCUMENTO
+% --------------------------------------------------------
 \documentclass[12pt,a4paper]{article}
 
 % --------------------------------------------------------
@@ -39,6 +41,12 @@
 \usepackage{tabularx}
 \usepackage{ragged2e}
 
+
+\usepackage{float}
+\usepackage{multirow}
+%\usepackage{graphicx}
+\usepackage[]{pdfpages}
+
 % Configurações de Margem (ABNT)
 \usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
 
@@ -47,7 +55,7 @@
 % --------------------------------------------------------
 
 \title{Título}
-\author{Autor}
+\author{Aluno and Orientador} % Não excluir o "and"
 \date{2022}
 
 % --------------------------------------------------------
@@ -83,11 +91,13 @@
 % RESUMOS
 % --------------------------------------------------------
 \input{chapters/Pre-Textual/resumo.tex}
+\cleardoublepage
 
 % --------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % --------------------------------------------------------
 
+% Abaixo está apenas uma sugestão, mas lembre-se de ver no edital quais o capítulos necessários! (Você pode separar da maneira que achar necessário!)
 \input{chapters/01_Introducao.tex}
 
 \input{chapters/02_Objetivos_e_Justificativa.tex}
@@ -108,6 +118,15 @@
 %\bibliographystyle{apalike}
 \bibliographystyle{lib/abntex2-alf} % Formato ABNT!
 \bibliography{references.bib}
+
+% --------------------------------------------------------
+% APÊNDICES
+% --------------------------------------------------------
+
+% Criação do apêndice
+\newpage
+\input{chapters/Pos-Textual/Anexos_ResumoeCertificadosCIC.tex}
+
 
 % --------------------------------------------------------
 % FINAL DO DOCUMENTO
